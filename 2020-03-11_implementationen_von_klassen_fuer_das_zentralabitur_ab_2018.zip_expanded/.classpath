@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="01 Datenstrukturklassen/01 linear"/>
+	<classpathentry kind="src" path="01 Datenstrukturklassen/02 baum"/>
+	<classpathentry kind="src" path="01 Datenstrukturklassen/03 graph"/>
+	<classpathentry kind="src" path="02 Datenbankklassen/01 Version fuer MySQL"/>
+	<classpathentry kind="src" path="02 Datenbankklassen/02 Version fuer SQLite"/>
+	<classpathentry kind="src" path="02 Datenbankklassen/03 Versionfuer MSAccess"/>
+	<classpathentry kind="src" path="03 Netzklassen"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

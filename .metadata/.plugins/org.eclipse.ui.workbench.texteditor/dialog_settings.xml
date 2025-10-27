@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="false"/>
+		<list key="findhistory">
+			<item value="triage"/>
+			<item value="pBestellung"/>
+			<item value="kellner1"/>
+			<item value="front"/>
+			<item value="front()"/>
+			<item value="bestellschlange"/>
+			<item value="QueueNode"/>
+			<item value="content"/>
+			<item value="getContent"/>
+			<item value="bestellungAu"/>
+		</list>
+	</section>
+</section>
