@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module liste_privat {
-}
