@@ -1,9 +1,0 @@
-INDEX VERSION 1.134+C:\Users\schar\Desktop\School\Info\workspace-informatik\.metadata\.plugins\org.eclipse.jdt.core
-1093976357.index
-1927795180.index
-1865797976.index
-3456258715.index
-1818230324.index
-3571542762.index
-1934745937.index
-3697698682.index
