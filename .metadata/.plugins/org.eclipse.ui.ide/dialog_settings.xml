@@ -23,14 +23,16 @@
 	</section>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\schar\Desktop\School\Info\workspace-informatik\torjaegerlistegenerisch"/>
 			<item value="C:\Users\schar\Desktop\School\Info\workspace-informatik\implementationen_von_klassen_fuer_das_zentralabitur"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
 			<item value="C:\Users\schar\Desktop\School\Info\workspace-informatik\2020-03-11_implementationen_von_klassen_fuer_das_zentralabitur_ab_2018.zip_expanded"/>
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
