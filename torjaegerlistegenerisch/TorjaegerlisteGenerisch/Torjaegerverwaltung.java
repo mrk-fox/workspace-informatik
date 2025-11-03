@@ -16,7 +16,8 @@ public class Torjaegerverwaltung{
     while (meineListe.hasAccess() && pTore <= meineListe.getContent().gibTore()) {
       meineListe.next();
     }
-    Fussballer neuerFussballer = new Fussballer(pName, pTore, pBiere, pVerein);
+    double pQuote = pTore/pBiere;
+    Fussballer neuerFussballer = new Fussballer(pName, pTore, pBiere, pVerein, pQuote);
     
     // Wenn das Ende der Liste noch nicht erreicht wurde, wird eingefügt, sonst wird angefügt
     if (meineListe.hasAccess()) {
@@ -86,6 +87,27 @@ public class Torjaegerverwaltung{
 	  }
 	  return aktFussballer;
   }
+  
+  public Fussballer ermittleBesteQuote() {
+	  Fussballer besteQuoteFussballer = meineListe.getContent();
+	  meineListe.toFirst();
+	  double currentQuote = 0;
+	  
+	  while(meineListe.hasAccess()) {
+		  Fussballer aktFussballer = meineListe.getContent();
+		  if(aktFussballer.gibQuote() > currentQuote) {
+			  currentQuote = aktFussballer.gibQuote();
+			  besteQuoteFussballer = aktFussballer;
+			  meineListe.next();
+		  }
+		  else {
+			  meineListe.next();
+		  }
+	  }	  
+	  
+	  return besteQuoteFussballer;
+  }
   // Für Donnerstag: NetSchubuch Abiball a+b+c
+  
   
 }

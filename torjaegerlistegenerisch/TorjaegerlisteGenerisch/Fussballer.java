@@ -6,13 +6,15 @@ public class Fussballer {
   private int biere;
   private String verein;
   private boolean captain;
+  private double quote;
   
-  public Fussballer(String pName, int pTore, int pBiere, String pVerein) {
+  public Fussballer(String pName, int pTore, int pBiere, String pVerein, double pQuote) {
     // Die Attribute name und tore werden gesetzt.
     name = pName;
     tore = pTore;
     biere = pBiere;
     verein = pVerein;
+    quote = pQuote;
     //captain = pCaptain;
   }
   
@@ -42,6 +44,14 @@ public class Fussballer {
   
   public boolean gibCaptain() {
 	  return captain;
+  }
+ 
+  public double gibQuote() {
+	  return quote;
+  }
+  
+  public void setQuote(double pQuote) {
+	  quote = pQuote;
   }
   
 }
