@@ -1,0 +1,29 @@
+
+
+------------------------------------------------------                ----------------------------------------
+|              Gaestelisteverwaltung                 |                |              Execute                 |
+------------------------------------------------------ <==============+---------------------------------------
+| + gaesteliste: List<Person>                        |                | + main(args: String[]): void         |
+------------------------------------------------------                ----------------------------------------
+| + gastHinzufügen(pName: String, pNachname: String, pEmail: String): void|
+| + gastEntfernen(pName: String, pNachname: String): void|
+| + gastChecken(pName: String,pNachname: String): boolean|
+| + gastAusgabe(): void                              |
+| + gastAnzahl(): int                                |
+------------------------------------------------------
+                |
+                |
+                |
+                V
+------------------------------------
+|            Person                |
+------------------------------------
+| - name: String                   |
+| - nachname: String               |
+| - email: String                  |
+------------------------------------
+| + Person(pName: String, pNachname: String, pEmail: String)|
+| + getName(): String              |
+| + getNachname(): String          |
+| + getEmail(): String             |
+------------------------------------
