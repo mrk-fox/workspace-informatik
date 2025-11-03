@@ -6,8 +6,8 @@ public class Execute {
 		Gaestelisteverwaltung gaestelisteverwaltung = new Gaestelisteverwaltung();
 		gaestelisteverwaltung.gastHinzufügen("Mark", "Fox", "markfoxsemail@gmail.com");
 		gaestelisteverwaltung.gastHinzufügen("Vladimir", "Putin", "russiasdictator@gmail.com");
-		gaestelisteverwaltung.gastHinzufügen("Friedrich", "Maerz", "DeutschlandsSchmerz@gmail.com");
-		gaestelisteverwaltung.gastHinzufügen("Niemand", "Niemandsson", "@gmail.com");
+		gaestelisteverwaltung.gastHinzufügen("Friedrich", "Maerz", "deutscherkanzler@gmail.com");
+		gaestelisteverwaltung.gastHinzufügen("Niemand", "Niemandsson", "              @gmail.com");
 		//Alles satire :)
 		
 		

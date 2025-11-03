@@ -15,8 +15,8 @@ public class Gaestelisteverwaltung {
 		    
 		while(gaesteliste.hasAccess()) {
 				
-			String current_name = gaesteliste.getContent().getName();
-			if(current_name.contentEquals(pName)) {
+			String current_name = gaesteliste.getContent().getNachname();
+			if(current_name.contentEquals(pNachname)) {
 				gaesteliste.insert(tmp_add);
 				break;
 			}
