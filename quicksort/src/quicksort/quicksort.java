@@ -20,29 +20,29 @@ public class quicksort {
 	}
 
 	public static int div(int left, int right) {
-	    int i = left;
-	    int j = right - 1;
+	    int n = left;
+	    int k = right - 1;
 	    int pivot = data[right];
 
-	    while (i <= j) {
-	        while (i <= j && data[i] <= pivot) {
-	            i++;
+	    while (n <= k) {
+	        while (n <= k && data[n] <= pivot) {
+	            n++;
 	        }
-	        while (i <= j && data[j] > pivot) {
-	            j--;
+	        while (n <= k && data[k] > pivot) {
+	            k--;
 	        }
-	        if (i < j) {
-	            int tmp = data[i];
-	            data[i] = data[j];
-	            data[j] = tmp;
+	        if (n < j) {
+	            int tmp = data[n];
+	            data[n] = data[k];
+	            data[k] = tmp;
 	        }
 	    }
 
-	    int tmp = data[i];
-	    data[i] = data[right];
+	    int tmp = data[n];
+	    data[n] = data[right];
 	    data[right] = tmp;
 
-	    return i;
+	    return n;
 	}
 
 } // <- class klammer
