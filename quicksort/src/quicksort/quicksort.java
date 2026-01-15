@@ -31,7 +31,7 @@ public class quicksort {
 	        while (n <= k && data[k] > pivot) {
 	            k--;
 	        }
-	        if (n < j) {
+	        if (n < k) {
 	            int tmp = data[n];
 	            data[n] = data[k];
 	            data[k] = tmp;
