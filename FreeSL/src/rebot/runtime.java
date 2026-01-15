@@ -1,5 +1,4 @@
 package rebot;
-import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -16,28 +15,20 @@ public class runtime {
     private volatile boolean running = false;
 
     public runtime() {
-        // Ein einziger Thread für periodische Tasks
         this.scheduler = Executors.newSingleThreadScheduledExecutor(r -> {
             Thread t = new Thread(r, "TimeSystem-Tick");
-            t.setDaemon(false); // falls true -> JVM kann vorzeitig beenden
+            t.setDaemon(false);
             return t;
         });
-        // Default-Callback (falls keiner gesetzt wurde)
         this.callback = () -> System.out.println("Tick @ " + Instant.now());
     }
 
-    /**
-     * Setzt den auszuführenden Callback.
-     */
+ 
     public void setCallback(Runnable callback) {
         if (callback == null) throw new IllegalArgumentException("callback darf nicht null sein");
         this.callback = callback;
     }
 
-    /**
-     * Startet das TimeSystem; wenn already running, passiert nichts.
-     * @param alignToWholeSecond wenn true, wartet bis zur nächsten vollen Sekunde
-     */
     public synchronized void start(boolean alignToWholeSecond) {
         if (running) return;
         long initialDelayMillis = 0;

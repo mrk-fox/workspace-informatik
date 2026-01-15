@@ -3,11 +3,18 @@ package rebot;
 
 public class RobotVerwaltung {
 	
-	List<Roboter> RobotList = new List<Roboter>();	//Internal list for  updates
+	static List<Roboter> RobotList = new List<Roboter>();	//Internal list for  updates
 	List<String> RSignature = new List<String>();	//Roboter Hex Signature
-	Stack<Roboter> RobotStack = new Stack<Roboter>(); //Roboter Charging system
+	static Stack<Roboter> RobotStack = new Stack<Roboter>(); //Roboter Charging system
 
-
+	public static void checkBotsDebug() { //prints 
+		RobotList.toFirst();
+		while(RobotList.hasAccess()) {
+			System.out.println(RobotList.getContent().giveName());
+			System.out.println(RobotList.getContent().getBat());
+			RobotList.next();
+		}
+	}
 	
 	
 	public static void main(String[] args) {
@@ -30,23 +37,53 @@ public class RobotVerwaltung {
 		Roboter h02 = new Roboter("pona", 2, 'a');
 		Roboter h03 = new Roboter("nimi", 3, 'a');
 		Roboter h04 = new Roboter("soweli", 4, 'b');
-		int i = 0;
-		while (i < 4) {
-		  
-		  i++;
-		
+		RobotList.insert(h01);
+		RobotList.toLast();
+		RobotList.insert(h02);
+		RobotList.toLast();
+		RobotList.insert(h03);
+		RobotList.toLast();
+		RobotList.insert(h04);
+		checkBotsDebug();
+	}
+
+
+	public static void minusBat() {
+		RobotList.toFirst();
+		while(RobotList.hasAccess()) {
+			if(!RobotList.getContent().currentLoad()) {
+				RobotList.getContent().changeBat(1);
+			}
+			else {
+				RobotList.getContent().chargeBat(1);
+			}
+			
+			System.out.println(RobotList.getContent().giveName());
+			System.out.println(RobotList.getContent().getBat());
+			RobotList.next();
 		}
-
-		
 	}
 
-
-
-
-	private static void onEverySecond() {
-		// TODO Auto-generated method stub
-		
+	public static void checkBat() {
+		RobotList.toFirst();
+		while(RobotList.hasAccess()) {
+			if(RobotList.getContent().getBat() < 95 && !RobotList.getContent().currentLoad()) {
+				RobotStack.push(RobotList.getContent());
+				System.out.println("Added to loading queue: " + RobotList.getContent().giveName());
+				RobotList.getContent().changeLoad();
+			}
+			else if(RobotList.getContent().getBat() == 100 && RobotList.getContent().currentLoad()) {
+				RobotList.getContent().changeLoad();
+			}
+			RobotList.next();
+		}
 	}
+	
+	public static void onEverySecond() {
+		minusBat();
+		checkBat();
+	}
+	
 
 }
 

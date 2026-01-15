@@ -1,18 +1,22 @@
 package rebot;
+import java.util.Random;
 
 public class Roboter {
+	Random rnd = new Random();
 	String name;
 	int increment_num;
 	char department;
 	String uniqueHex;
 	int bat;
+	boolean loads;
 	
 	public Roboter(String pName, int pIncrement_num, char pDepartment) {
 		name = pName;
 		increment_num = pIncrement_num;
 		department = pDepartment;
 		uniqueHex = Hex.generateUnboundedRandomHex();
-		int bat = 100;
+		bat = 100;
+		loads = false;
 		}
 	
 	public String giveName() {
@@ -30,14 +34,24 @@ public class Roboter {
 	}
 	
 	public void changeBat(int minus) {
-		bat = bat - minus;
+		if(rnd.nextInt(3) == 0)  {
+			bat = bat - minus;
+		}
 	}
 	
-	public void chargeBat() {
-		bat = 100;
+	public void chargeBat(int plus) {
+		bat = bat + plus;
 	}
 	
 	public int getBat() {
 		return bat;
+	}
+	
+	public void changeLoad() {
+		loads = !loads;
+	}
+	
+	public boolean currentLoad() {
+		return loads;
 	}
 }
