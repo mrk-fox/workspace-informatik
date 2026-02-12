@@ -5,7 +5,7 @@ Ein binärer Suchbaum ist ein Binärbaum, für den folgende Bedingungen erfüllt
 3. Für alle Knoten gilt: Die Schlüsselwerte der Knotenobjekte im nicht leeren rechten Teilbaum sind größer als der Schlüsselwert im Knotenobjekt
 
 
-
+EVA Planung Mo
 
 if solve(maze, visited, x+1, y):
         return True
@@ -18,3 +18,4 @@ if solve(maze, visited, x-1, y):
 
 if solve(maze, visited, x, y-1):
         return True
+
