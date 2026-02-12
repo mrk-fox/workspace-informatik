@@ -21,12 +21,13 @@ if solve(maze, visited, x, y-1):
 
 ## _Beispiel: Greedy-Algorithmus_
 
-Kapazität: 50kg
-|Gegenstand|Gewicht|  Wert  |
-|    A     |   10  |   60   |
-|    B     |   20  |   100  |
-|    C     |   30  |   120  |
-|    D     |   25  |   30   |
-|    E     |   15  |   45   |
-|    F     |   40  |   200  |
+Kapazität: 50kg <br>
+|Gegenstand|Gewicht|  Wert  | <br>
+|    A     |   10  |   60   |<br>
+|    B     |   20  |   100  |<br>
+|    C     |   30  |   120  |<br>
+|    D     |   25  |   30   |<br>
+|    E     |   15  |   45   |<br>
+|    F     |   40  |   200  |<br>
+
 
