@@ -19,3 +19,14 @@ if solve(maze, visited, x-1, y):
 if solve(maze, visited, x, y-1):
         return True
 
+## _Beispiel: Greedy-Algorithmus_
+
+Kapazität: 50kg
+|Gegenstand|Gewicht|  Wert  |
+|    A     |   10  |   60   |
+|    B     |   20  |   100  |
+|    C     |   30  |   120  |
+|    D     |   25  |   30   |
+|    E     |   15  |   45   |
+|    F     |   40  |   200  |
+
