@@ -7,12 +7,14 @@ Ein binärer Suchbaum ist ein Binärbaum, für den folgende Bedingungen erfüllt
 
 
 
+if solve(maze, visited, x+1, y):
+        return True
 
-  if solve(maze, visited, x+1, y):
+if solve(maze, visited, x, y+1):
         return True
-    if solve(maze, visited, x, y+1):
+
+if solve(maze, visited, x-1, y):
         return True
-    if solve(maze, visited, x-1, y):
-        return True
-    if solve(maze, visited, x, y-1):
+
+if solve(maze, visited, x, y-1):
         return True
