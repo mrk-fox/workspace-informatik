@@ -1,3 +1,4 @@
+package binarytree_exam;
 /**
  * <p>
  * Materialien zu den zentralen NRW-Abiturpruefungen im Fach Informatik ab 2017.
